@@ -1,4 +1,4 @@
-﻿@model 
+﻿@model LoginViewModel
 
 <!DOCTYPE html>
 <html lang="en">
@@ -27,17 +27,17 @@
         <div class="account-page">
             <div class="account-center background">
                 <div class="account-box">
-                    <form action="http://dreamguys.co.in/preclinic/template/index.html" class="form-signin">
+                    <form asp-action="Login" asp-controller="Admin" method="post" class="form-signin">
                         <div class="account-logo">
                             <a href="index-2.html"><img src="~/AdminFiles/assets/img/logo-dark.png" alt=""></a>
                         </div>
                         <div class="form-group">
-                            <label>Username or Email</label>
-                            <input type="text" autofocus="" class="form-control">
+                            <label asp-for="UserName">Username or Email</label>
+                            <input asp-for="UserName" type="text" autofocus="" class="form-control">
                         </div>
                         <div class="form-group">
-                            <label>Password</label>
-                            <input type="password" class="form-control">
+                            <label asp-for="Password">Password</label>
+                            <input asp-for="Password" type="password" class="form-control">
                         </div>
                         <div class="form-group text-right">
                             <a href="forgot-password.html">Forgot your password?</a>
@@ -45,9 +45,12 @@
                         <div class="form-group text-center">
                             <button type="submit" class="btn btn-primary account-btn">Login</button>
                         </div>
-                        <div class="text-center register-link">
-                            Don’t have an account? <a asp-action="Register" asp-controller="Admin">Register Now</a>
-                        </div>
+                        @if (Model.Selected == "user")
+                        {   
+                           <div class="text-center register-link">
+                                Don’t have an account? <a asp-action="Register" asp-controller="Authentication" asp-route-selected="@Model.Selected">Register Now</a>
+                           </div>
+                        }
                     </form>
                 </div>
             </div>

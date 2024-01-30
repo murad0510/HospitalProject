@@ -27,9 +27,13 @@
             <div class="account-center">
                 <div class="account-box background">
                     <img src="~/AdminFiles/assets/img/LoginAndRegisterWallpaper.jpg" alt="image"/>
-                    <form action="http://dreamguys.co.in/preclinic/template/index.html" class="form-signin">
-						<div class="account-logo">
+                    <form asp-action="Register" asp-controller="Authentication" method="post" class="form-signin">
+                        <div class="account-logo">
                             <a href="index-2.html"><img src="~/AdminFiles/assets/img/logo-dark.png" alt=""></a>
+                        </div>
+                        <div class="form-group" style="display:none;">
+                            <label asp-for="Selected">Selected</label>
+                            <input asp-for="Selected" type="text" class="form-control">
                         </div>
                         <div class="form-group">
                             <label asp-for="UserName">Username</label>
@@ -48,20 +52,20 @@
                             <input asp-for="ConfirmPassword" type="password" class="form-control">
                         </div>
                         <div class="form-group">
-                            <label asp-for="ConfirmPassword">Mobile Number</label>
-                            <input type="text" class="form-control">
+                            <label asp-for="MobileNumber">Mobile Number</label>
+                            <input asp-for="MobileNumber" type="number" class="form-control">
                         </div>
-                        <div class="form-group checkbox">
+@*                         <div class="form-group checkbox">
                             <label>
                                 <input type="checkbox"> I have read and agree the Terms & Conditions
                             </label>
-                        </div>
+                        </div> *@
                         <div class="form-group text-center">
                             <button class="btn btn-primary account-btn" type="submit">Signup</button>
                         </div>
-                        <div class="text-center login-link">
+@*                         <div class="text-center login-link">
                             Already have an account? <a asp-action="Login" asp-controller="Admin">Login</a>
-                        </div>
+                        </div> *@
                     </form>
                 </div>
             </div>

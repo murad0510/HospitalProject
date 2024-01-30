@@ -56,6 +56,11 @@ namespace HospitalProject.WebUI.Controllers
             return View();
         }
 
+        public IActionResult DoctorSingle()
+        {
+            return View();
+        }
+
         public IActionResult Service()
         {
             return View();
