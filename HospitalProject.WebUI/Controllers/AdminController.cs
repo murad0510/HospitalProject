@@ -34,6 +34,16 @@ namespace HospitalProject.WebUI.Controllers
             return View();
         }
 
+        public IActionResult Appointments()
+        {
+            return View();
+        }
+
+        public IActionResult AddDoctor()
+        {
+            return View();
+        }
+
         public IActionResult Register()
         {
             return View();
