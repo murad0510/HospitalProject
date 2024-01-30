@@ -29,8 +29,7 @@ namespace HospitalProject.WebUI.Controllers
             return View();
         }
 
-        [HttpPost]
-        public IActionResult Login()
+        public IActionResult Activities()
         {
             return View();
         }

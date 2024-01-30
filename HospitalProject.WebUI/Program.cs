@@ -1,4 +1,5 @@
 using HospitalProject.Entities.Entity;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,6 +13,10 @@ builder.Services.AddDbContext<CustomIdentityDbContext>(opt =>
 {
     opt.UseSqlServer(context);
 });
+
+builder.Services.AddIdentity<CustomIdentityUser, CustomIdentityRole>()
+    .AddEntityFrameworkStores<CustomIdentityDbContext>()
+    .AddDefaultTokenProviders();
 
 var app = builder.Build();
 
