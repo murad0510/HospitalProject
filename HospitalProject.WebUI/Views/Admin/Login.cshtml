@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@model 
+
+<!DOCTYPE html>
 <html lang="en">
 
 
@@ -8,9 +10,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
     <title>Preclinic - Medical & Hospital - Bootstrap 4 Admin Template</title>
-    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="~/AdminFiles/assets/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="~/AdminFiles/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="~/AdminFiles/assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="~/AdminFiles/assets/css/myCss.css">
+
     <!--[if lt IE 9]>
         <script src="assets/js/html5shiv.min.js"></script>
         <script src="assets/js/respond.min.js"></script>
@@ -20,11 +25,11 @@
 <body>
     <div class="main-wrapper account-wrapper">
         <div class="account-page">
-            <div class="account-center">
+            <div class="account-center background">
                 <div class="account-box">
                     <form action="http://dreamguys.co.in/preclinic/template/index.html" class="form-signin">
                         <div class="account-logo">
-                            <a href="index-2.html"><img src="assets/img/logo-dark.png" alt=""></a>
+                            <a href="index-2.html"><img src="~/AdminFiles/assets/img/logo-dark.png" alt=""></a>
                         </div>
                         <div class="form-group">
                             <label>Username or Email</label>
@@ -41,17 +46,17 @@
                             <button type="submit" class="btn btn-primary account-btn">Login</button>
                         </div>
                         <div class="text-center register-link">
-                            Don’t have an account? <a href="register.html">Register Now</a>
+                            Don’t have an account? <a asp-action="Register" asp-controller="Admin">Register Now</a>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
-    <script src="assets/js/jquery-3.2.1.min.js"></script>
-    <script src="assets/js/popper.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/app.js"></script>
+    <script src="~/AdminFiles/assets/js/jquery-3.2.1.min.js"></script>
+    <script src="~/AdminFiles/assets/js/popper.min.js"></script>
+    <script src="~/AdminFiles/assets/js/bootstrap.min.js"></script>
+    <script src="~/AdminFiles/assets/js/app.js"></script>
 </body>
 
 

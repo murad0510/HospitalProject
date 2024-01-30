@@ -1,7 +1,17 @@
+using HospitalProject.Entities.Entity;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+var context = builder.Configuration.GetConnectionString("mydb");
+
+builder.Services.AddDbContext<CustomIdentityDbContext>(opt =>
+{
+    opt.UseSqlServer(context);
+});
 
 var app = builder.Build();
 
@@ -22,6 +32,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Admin}/{action=Login}/{id?}");
 
 app.Run();
