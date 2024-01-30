@@ -1,4 +1,4 @@
-using HospitalProject.Entities.Entity;
+using HospitalProject.Data.Entity;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
