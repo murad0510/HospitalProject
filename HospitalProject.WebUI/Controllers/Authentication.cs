@@ -1,4 +1,4 @@
-﻿using HospitalProject.Entities.Entity;
+﻿using HospitalProject.Entities.Data;
 using HospitalProject.WebUI.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;

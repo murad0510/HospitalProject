@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HospitalProject.Entities.Entity
+namespace HospitalProject.Entities.Data
 {
-    public class CustomIdentityUser : IdentityUser
+    public class CustomIdentityRole : IdentityRole
     {
     }
 }
