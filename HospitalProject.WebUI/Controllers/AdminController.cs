@@ -1,7 +1,4 @@
-﻿using HospitalProject.Entities.Entity;
-using HospitalProject.WebUI.Models;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 
 namespace HospitalProject.WebUI.Controllers
 {
